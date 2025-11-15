@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Certificado - Vitcorino</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 40px; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .certificado { 
+            border: 5px solid #8B4513; 
+            padding: 50px; 
+            text-align: center; 
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .titulo { 
+            color: #8B4513; 
+            font-size: 36px; 
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .nome { 
+            color: #2F4F4F; 
+            font-size: 28px; 
+            font-weight: bold; 
+            margin: 30px 0;
+            padding: 10px;
+            border-bottom: 2px solid #8B4513;
+            display: inline-block;
+        }
+        .info { 
+            color: #000; 
+            font-size: 18px; 
+            margin: 15px 0; 
+        }
+        .codigo { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            margin: 30px 0; 
+            font-family: monospace;
+            font-size: 16px;
+            border: 1px dashed #6c757d;
+            border-radius: 5px;
+        }
+        .assinatura {
+            margin-top: 50px;
+            border-top: 2px solid #8B4513;
+            padding-top: 20px;
+            display: inline-block;
+        }
+        .qrcode {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .qrcode img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background: white;
+        }
+        .qrcode-text {
+            font-size: 10px;
+            margin-top: 5px;
+            color: #666;
+        }
+        .btn {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-info { background: #17a2b8; color: white; }
+        @media print {
+            body { background: white; padding: 0; }
+            .certificado { box-shadow: none; border: 3px solid #8B4513; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificado">
+        <div class="titulo">🎓 CERTIFICADO</div>
+        <div class="info">Certificamos que</div>
+        <div class="nome">Vitcorino</div>
+        <div class="info">participou do(a) curso/evento</div>
+        <div class="info" style="font-weight: bold; font-size: 22px;">Programação Web e Design</div>
+        <div class="info">com carga horária de <strong>40 horas</strong></div>
+        <div class="info">concluído em: <strong>13/11/2025</strong></div>
+        
+        <div class="codigo">
+            <strong>Código de Verificação:</strong><br>
+            CERT_6915cd396a2c8_3947
+        </div>
+        <div class="qrcode">
+            <img src="assets/qrcodes/CERT_6915cd396a2c8_3947.png" alt="QR Code">
+            <div class="qrcode-text">Escaneie para verificar</div>
+        </div>
+        <div class="assinatura">
+            _________________________<br>
+            <strong>Coordenador do Curso</strong>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;" class="no-print">
+        <button onclick="window.print()" class="btn btn-primary">🖨️ Imprimir Certificado</button>
+        <a href="certificado_CERT_6915cd396a2c8_3947.html" download class="btn btn-success">💾 Baixar Certificado</a>
+        <a href="../verificar.php?codigo=CERT_6915cd396a2c8_3947" class="btn btn-info">🔍 Verificar Online</a>
+    </div>
+</body>
+</html>
